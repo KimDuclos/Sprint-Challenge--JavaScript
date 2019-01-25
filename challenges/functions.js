@@ -39,11 +39,12 @@ consume(10,16,multiply); // 160
 consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
-// ==== Closures ==== 
+console.log(" ");
+console.log("// ==== Closures ==== ");
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: Inheritance. The nested function will inherit data from the parent function;
 
 
 const external = "I'm outside the function";
