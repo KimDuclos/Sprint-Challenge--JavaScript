@@ -52,6 +52,22 @@ const dino3 = {
   period: "Late Cretaceious" 
 };
 
+console.log("How much did tyrannosaurus weigh?");
+console.log(dino1.weight);
+
+console.log("What was the diet of a velociraptor?");
+console.log(dino3.diet);
+
+console.log("How long was a stegosaurus?");
+console.log(dino2.length);
+
+console.log("What time period did tyrannosaurus live in?");
+console.log(dino1.period);
+
+
+console.log("Create a new roar method for the tyrannosaurus.  When called, return 'RAWERSRARARWERSARARARRRR!' Log the result.");
+console.log(dino1.roar());
+
 
 
 // ==== Arrays ====
