@@ -113,8 +113,16 @@ for (let x=0; x<graduates.length; x++){
 console.log(contactInfo);
 
 
-/* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+console.log(" ");
+console.log("Request 3: Find out how many universities have the string Uni' included in their name. Create a new array called uni that contains them all. Log the result.");
+
 const uni = [];
+
+for(let x=0; x<graduates.length; x++)
+ if (graduates[x].university.includes("Uni")) {
+   uni.push(graduates[x].university);
+ }
+
 console.log(uni);
 
 
