@@ -91,11 +91,11 @@ console.log("Request 1: Create a new array called universities that contains all
 /*Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-for (let i=0; i<graduates.length; i++){
+for (let i=0; i<graduates.length; i++){  // creates the array of Universities
   universities.push(graduates[i].university)
 }
 
-console.log(universities.sort());
+console.log(universities.sort());  // alphatizes the array
 
 console.log(" ");
 console.log("Request 2: Create a new array called contactInfo that contains both first name and email of each student. ");
@@ -126,7 +126,8 @@ for(let x=0; x<graduates.length; x++)
 console.log(uni);
 
 
-// ==== ADVANCED Array Methods ====
+console.log(" ");
+console.log("// ==== ADVANCED Array Methods ====");
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
@@ -145,7 +146,8 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 console.log(" ");
 console.log("Request 1: .forEach()");
 
-/*The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
+/*The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  
+The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 const animalNames = [];
@@ -159,7 +161,8 @@ console.log(animalNames);
 console.log(" ");
 console.log("Request 2: .map() ");   
 
-/*The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+/*The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  
+Log the resut.
 
 */
 
