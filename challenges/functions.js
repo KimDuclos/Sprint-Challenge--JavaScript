@@ -1,11 +1,16 @@
-// ==== Callbacks ====  
+console.log("==== Callbacks ====  ")
 
-/* Step 1: Create a higher-order function that accepts a callback
-  * Create a higher-order function named consume that can take 3 parameters.
+console.log(" ");
+console.log("Step 1: Create a higher-order function that accepts a callback");
+ /* * Create a higher-order function named consume that can take 3 parameters.
   * The first two parameters can accept any argument
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+
+function consume(param1, param2, cb) {
+  cb(param1, param2);
+ }
 
 
 /* Step 2: Create several functions to callback with consume();

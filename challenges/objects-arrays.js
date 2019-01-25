@@ -142,43 +142,66 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
-/* Request 1: .forEach()
+console.log(" ");
+console.log("Request 1: .forEach()");
 
-The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
+/*The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 const animalNames = [];
+
+zooAnimals.forEach(function(animal) {
+  animalNames.push("Name: " + animal.animal_name + ", Scientific: " + animal.scientific_name)
+});
+
 console.log(animalNames);
 
-/* Request 2: .map()    
+console.log(" ");
+console.log("Request 2: .map() ");   
 
-The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+/*The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
 
 const lowerCase = [];
+
+  zooAnimals.map(function(animal_lc) {
+    lowerCase.push(animal_lc.animal_name.toLowerCase())
+  });
+
 console.log(lowerCase); 
 
-/* Request 3: .filter() 
+console.log(" ");
+console.log("Request 3: .filter() ");
 
-The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+/*The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
 const largerPopulation = [];
+
+for(let q=0; q<zooAnimals.length; q++){
+  if (zooAnimals[q].population < 5) {
+    largerPopulation.push(zooAnimals[q].animal_name);
+  }
+}
+
+console.log("Population less than 5:");
 console.log(largerPopulation);
 
-/* Request 4: .reduce() 
+console.log(" ");
+console.log("Request 4: .reduce() ");
 
-The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
+/*The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+let populationTotal = zooAnimals.reduce(function(totalPopulation, currentValue) {
+  return totalPopulation + currentValue.population;
+}, 0);
+
+  
 console.log(populationTotal);
 
-
-/* 
-
-Stretch: If you haven't already, convert your array method callbacks into arrow functions.
+/*Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
 
