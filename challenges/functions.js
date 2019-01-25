@@ -13,11 +13,24 @@ function consume(param1, param2, cb) {
  }
 
 
-/* Step 2: Create several functions to callback with consume();
-  * Create a function named add that returns the sum of two numbers
+ console.log(" ");
+ console.log("Step 2: Create several functions to callback with consume();");
+ /* * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+
+function add(addNum1, addNum2){
+  console.log(addNum1 + addNum2);
+}
+
+function multiply(multNum1, multNum2) {
+  console.log(multNum1 * multNum2);
+}
+
+function greeting(first_name, last_name) {
+   console.log(`Hello ${first_name} ${last_name}, nice to meet you!`);
+}
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
